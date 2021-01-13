@@ -1,0 +1,23 @@
+name = "johnsmith"
+code = "john321"
+attempt = 0
+f_attempt = 3
+while attempt < f_attempt:
+    attempt += 1
+    user = input("Enter user name: ")
+    if user == name:
+        password = input("Enter password: ")
+        if password == code:
+            print(f"Hello {name} Welcome back!!")
+            break
+        else:
+            while password != code:
+               newattempt = input("Wrong password please try again!!")
+               if newattempt == code:
+                   print(f"Hello {name} Welcome back!!")
+                   break
+        break
+    else:
+        print("sorry, we couldn't recognize you. please try again")
+else:
+    print("sorry you only had 3 chances!")
